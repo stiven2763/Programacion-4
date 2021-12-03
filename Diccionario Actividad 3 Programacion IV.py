@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Oct 25 19:35:16 2021
-
-"""
-
 from pymongo import MongoClient
 
 client= MongoClient("localhost")
