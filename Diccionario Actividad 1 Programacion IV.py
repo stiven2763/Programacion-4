@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 22 14:43:18 2021
-
-"""
-
-
 #Importamos la librería sqlite3 para trabajar con las bases de datos
 
 
