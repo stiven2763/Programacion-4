@@ -1,0 +1,38 @@
+{% with messages = get_flashed_messages() %}
+{% if messages%}
+{% for message in messages %}
+    <p>{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<form action="/add_word" method = "POST">
+    <input type="text" class="form-control" name="Slang" placeholder="Slang">
+    <input type="text" class="form-control" name="Español" placeholder="Español">        
+    <button type="submit">
+        Save
+    </button>
+ </form>
+
+ <table>
+    <thead> 
+        <tr>
+            <td>Slang</td>
+            <td>Español</td>
+            <td>Operations</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for palabra in DiccionarioSlang %}
+            <tr>
+                <td>{{ palabra.1}}</td> 
+                <td>{{ palabra.2}}</td>
+                <td>
+                    <a href="/edit/{{palabra.0}}">Edit</a>
+                    <a href="/delete/{{palabra.0}}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+ </table>
+          
